@@ -1,0 +1,102 @@
+import java.util.Scanner;
+public class min_max {
+    public static void main(String[] args){
+    
+        Scanner sc=new Scanner(System.in);
+        int sayi, i, max=0, min=100000000, a;
+        System.out.print("Kaç sayı gireceksiniz? ");
+        sayi=sc.nextInt();
+
+        for(i=1; i<=sayi; i++){
+            System.out.println(i+". sayıyı girin: ");
+            a=sc.nextInt();
+            if(a>max)
+                max=a;
+
+            if(a<min)
+                min=a;
+
+            if(i==1) {
+                min=0;
+                max=a;
+                min=a;
+            }
+            if(i==1)
+                System.out.println("Girdiğiniz sayı: " +a);
+            if(i>1)
+                System.out.println("Girdiğiniz sayılar: " + a);
+            if(min==max)
+                System.out.println(i+" tane aynı sayı girdiniz: " +a);
+        }
+
+        System.out.println("Maxiumum değer: " + max + "\nMinimum değer: " + min);
+    }
+}
+(import java.util.Scanner;
+public class min_max {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int sayi, i, max=0, min=100000000, a;
+        System.out.print("Kaç sayı gireceksiniz? ");
+        sayi=sc.nextInt();
+
+        for(i=1; i<=sayi; i++){
+            System.out.println(i+". sayıyı girin: ");
+            a=sc.nextInt();
+            if(a>max)
+                max=a;
+
+            if(a<min)
+                min=a;
+
+            if(i==1) {
+                min=0;
+                max=a;
+                min=a;
+            }
+            if(i==1)
+                System.out.println("Girdiğiniz sayı: " +a);
+            if(i>1)
+                System.out.println("Girdiğiniz sayılar: " + a);
+            if(min==max)
+                System.out.println(i+" tane aynı sayı girdiniz: " +a);
+        }
+
+        System.out.println("Maxiumum değer: " + max + "\nMinimum değer: " + min);
+    }
+}
+(import java.util.Scanner;
+public class min_max {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int sayi, i, max=0, min=100000000, a;
+        System.out.print("Kaç sayı gireceksiniz? ");
+        sayi=sc.nextInt();
+
+        for(i=1; i<=sayi; i++){
+            System.out.println(i+". sayıyı girin: ");
+            a=sc.nextInt();
+            if(a>max)
+                max=a;
+
+            if(a<min)
+                min=a;
+
+            if(i==1) {
+                min=0;
+                max=a;
+                min=a;
+            }
+            if(i==1)
+                System.out.println("Girdiğiniz sayı: " +a);
+            if(i>1)
+                System.out.println("Girdiğiniz sayılar: " + a);
+            if(min==max)
+                System.out.println(i+" tane aynı sayı girdiniz: " +a);
+        }
+
+        System.out.println("Maxiumum değer: " + max + "\nMinimum değer: " + min);
+    }
+}
+
+(https://patika.dev/tr)
