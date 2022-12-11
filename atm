@@ -1,0 +1,82 @@
+import java.util.Scanner;
+public class atm_case {
+    public static void main(String[] args){
+        Scanner sc=new Scanner (System.in);
+        int select, balance=1500, right=3, price;
+        String username, password;
+
+
+        while(right>0){
+            if(right==3) {
+                System.out.println("Kullanıcı adınızı ve şifrenizi girin: ");
+                username = sc.nextLine();
+                password = sc.nextLine();
+            }
+            else{
+                System.out.println("Kullanıcı adınızı ve şifrenizi yeniden girin: ");
+                username = sc.nextLine();
+                password = sc.nextLine();
+            }
+
+            if(username.equals("Patika") && password.equals("Patika123")) {
+                System.out.println("Giriş başarılı");
+
+                do {
+                    System.out.println("Yapmak istediğiniz işlemi seçiniz\n1- Bakiye Sorulama\n2- Para Çekme\n" +
+                            "3- Para Yatırma\n4- Çıkış");
+
+                    select = sc.nextInt();
+                    switch (select) {
+                    
+                        case 1:
+                            System.out.println("Bakiye: " + balance);
+                            break;
+                            
+                        case 2:
+                            boolean isBalance;
+                            do {
+                                isBalance = true;
+                                System.out.println("Çekmek istediğiniz miktarı girin: ");
+                                price = sc.nextInt();
+                                if (price > balance) {
+                                    isBalance = false;
+                                    System.out.println("Bakiye yetersiz. Yeni tutar deneyiniz.");
+                                }
+                            } while (isBalance == false);
+                            balance -= price;
+                            System.out.println("Hesabınızdan " + price + " TL çektiniz.\nBakiyeniz: " + balance);
+                            break;
+
+                        case 3:
+                            System.out.println("Yatırmak istediğiniz miktarı girin: ");
+                            price = sc.nextInt();
+                            balance += price;
+                            System.out.println("Heabınıza " + price + " TL yatırdınız.\nBakiyeniz: " + balance);
+                            break;
+
+                        default:
+                            System.out.println("Hatalı tuşa bastınız. Tekrar deneyiniz.");
+                            break;
+
+
+                    }
+                } while (select != 4);
+                System.out.println("Çıkış yapıldı.");
+                break;
+
+            }
+            else {
+                right--;
+                System.out.println("Kullanıcı adı veya şifre yanlış lütfen tekrar deneyin.");
+                if (right == 0)
+                    System.out.println("Hesabınız bloke oldu. Bankanız ile iletişime geçiniz.");
+                else
+                    System.out.println("Hesabınızın bloke olmaması için kalan şifre deneme hakkınız: " + right);
+                break;
+            }
+
+        }
+    }
+}
+
+www.patika.dev
