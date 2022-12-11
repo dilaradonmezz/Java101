@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class mukemmel_sayi {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int sayi, bolen,toplam=0;
+        System.out.println("Sayı giriniz: ");
+        sayi=sc.nextInt();
+        if(sayi>0) {
+            for (bolen = 1; bolen < sayi; bolen++) {
+                if (sayi % bolen == 0)
+                    toplam += bolen;
+            }
+            if (toplam == sayi)
+                System.out.println(sayi + " Sayısı Mükemmel sayıdır.");
+            else
+                System.out.println(sayi + " Sayısı Mükemmel sayı değildir.");
+
+            if (toplam == sayi)
+                System.out.print(sayi + " = ");
+            else
+                System.out.print(sayi + " (eşit değil) ");
+            for (bolen = 1; bolen < sayi; bolen++) {
+                if (sayi % bolen == 0) {
+                    toplam += bolen;
+                    System.out.print(bolen);
+                    if (bolen < sayi / 2)
+                        System.out.print(" + ");
+
+                }
+            }
+
+        }
+        else
+            System.out.println("Sıfırdan büyük bir sayı girmelisiniz.");
+    }
+}
+
+
+Patika.dev
